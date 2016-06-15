@@ -5,6 +5,7 @@ var $q = require('q');
 var request = require('request');
 
 var NUM_FEED_PROPS = 2;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 
@@ -172,6 +173,6 @@ app.post('/props', function(req, res) {
   });
 });
 
-app.listen(3000,function() {
-  console.log('app listening on port 3000');
+app.listen(PORT,function() {
+  console.log('app listening on port', PORT);
 });
