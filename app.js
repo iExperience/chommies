@@ -23,7 +23,7 @@ function validateTokenMiddleware (req, res, next) {
     var brus = snapshot.val();
     var meBru = _.findKey(brus, {"token": req.query.token});
     
-    if(meBru.length > 0) {
+    if(meBru) {
       req.user = brus[meBru];
       req.user.id = meBru;
       delete req.user.token;
