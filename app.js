@@ -4,7 +4,7 @@ var _ = require('lodash');
 var $q = require('q');
 var request = require('request');
 
-var NUM_FEED_PROPS = 2;
+var NUM_FEED_PROPS = process.env.NUM_FEED_PROPS || 20;
 var PORT = process.env.PORT || 3000;
 
 var app = express();
