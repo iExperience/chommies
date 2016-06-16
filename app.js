@@ -175,11 +175,14 @@ app.post('/props', function(req, res) {
     var obj = {
       text: props,
       receiver: results[0],
+      sender: req.user,
       created_at: Date.now(),
       positivity_score: results[1]
     }
     
     fbRef.child('props').push(obj);
+    
+    delete obj['sender'];
     res.send(obj);
   });
 });
