@@ -13,3 +13,5 @@ All requests require your API token as a URL parameter in the form `token=yourTo
 
 `GET \brus` returns a list of all brus
 
+Example url to get recent props: `/props?token=allie123`
+Example url to get your recent props: `/props/me?token=allie123`
