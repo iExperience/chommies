@@ -18,7 +18,7 @@ The returned Prop object has the following properties:
 `POST http://ixchommies.herokuapp.com/props` adds some props. Parameters are:
   - `for` needs to be the id of a user
   - `props` must contain the text of the props
-Example url to add a prop: `/props?token=myToken&for={userID}&props=you%20rock`
+Example url to add a prop: `/props?token=myToken&for=aPersonId&props=you%20rock`
 
 `GET http://ixchommies.herokuapp.com/props/me` returns a list of all props you've received
 
