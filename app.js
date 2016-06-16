@@ -155,10 +155,10 @@ app.post('/props', function(req, res) {
   
   var doValidation = function(forUser, props) {
     return $q.all([validateUser(forUser), validateProps(props)]).then(function(results) {
-      return results;
+      return $q.resolve(results);
     }, function(results) {
       res.status(400).send({"message": results});
-      return results;
+      return $q.reject();
     });
   };
   
