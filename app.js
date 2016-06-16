@@ -93,6 +93,7 @@ app.get('/props/me', function(req, res) {
   });
 });
 
+// adds some new props
 app.post('/props', function(req, res) {
   var fbRef = new Firebase("https://ixchommies.firebaseio.com/");
   var validateProps = function(props) {
@@ -169,7 +170,6 @@ app.post('/props', function(req, res) {
   doValidation(forUser, props).then(function(results) {
     var obj = {
       text: props,
-      sender: req.user,
       receiver: results[0],
       created_at: Date.now(),
       positivity_score: results[1]
