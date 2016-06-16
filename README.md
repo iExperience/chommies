@@ -5,14 +5,16 @@ All requests require your API token as a URL parameter in the form `token=yourTo
 
 `GET http://ixchommies.herokuapp.com/props` returns a feed of the most recent props
 Example url to get recent props: `/props?token=myTOken`
-The returned Prop object has the following properties:
+The returned props has the following format:
 ```
-{
+[{
   receiver: {first_name: string, last_name: string},
   created_at: datetime,
   text: string,
   positivity_score: double
-}
+},
+...
+]
 ```
 
 `POST http://ixchommies.herokuapp.com/props` adds some props. Parameters are:

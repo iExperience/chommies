@@ -3,6 +3,7 @@ var express = require('express');
 var _ = require('lodash');
 var $q = require('q');
 var request = require('request');
+var bodyParser = require('body-parser');
 
 var NUM_FEED_PROPS = process.env.NUM_FEED_PROPS || 20;
 var PORT = process.env.PORT || 3000;
@@ -34,6 +35,7 @@ function validateTokenMiddleware (req, res, next) {
   });
 }
 
+app.use(bodyParser.json());
 
 // allow cross-origin requests
 app.use(function(req, res, next) {
@@ -163,8 +165,9 @@ app.post('/props', function(req, res) {
     });
   };
   
-  var props = req.query.props;
-  var forUser = req.query.for;
+  console.log(req.body);
+  var props = req.body.props;
+  var forUser = req.body.for;
   var forUserObj = {};
   
   // validate all inputs
