@@ -34,8 +34,6 @@ function validateTokenMiddleware (req, res, next) {
   });
 }
 
-// enforce token on every request
-app.use(validateTokenMiddleware);
 
 // allow cross-origin requests
 app.use(function(req, res, next) {
@@ -43,6 +41,9 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+// enforce token on every request
+app.use(validateTokenMiddleware);
 
 app.get('/', function(req,res) {
   res.send("");
