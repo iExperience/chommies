@@ -115,7 +115,7 @@ app.post('/props', function(req, res) {
       }
     }, function(error, callback, body) {
       body = JSON.parse(body);
-      if(body.type === "negative") {
+      if(body.score < .1) {
         deferred.reject("Positive props only!");
       } else {
         deferred.resolve(body.score);
