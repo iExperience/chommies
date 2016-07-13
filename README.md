@@ -19,7 +19,7 @@ The returned props has the following format:
 ]
 ```
 
-`POST http://ixchommies.herokuapp.com/props` adds some props. Parameters are:
+`POST http://ixchommies.herokuapp.com/props` adds some props. Body content is:
   - `for` needs to be the id of a user
   - `props` must contain the text of the props
 
