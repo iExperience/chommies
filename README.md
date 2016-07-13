@@ -4,7 +4,9 @@ ixChommies API
 All requests require your API token as a URL parameter in the form `token=yourTokenHere`.
 
 `GET http://ixchommies.herokuapp.com/props` returns a feed of the most recent props
+
 Example url to get recent props: `/props?token=myTOken`
+
 The returned props has the following format:
 ```
 [{
@@ -26,7 +28,8 @@ Example url to add a prop: `/props?token=myToken&for=aPersonId&props=you%20rock`
 `GET http://ixchommies.herokuapp.com/props/me` returns a list of all props you've received
 
 `GET http://ixchommies.herokuapp.com/brus` returns a list of all brus
-The returned Bru object in the format:
+
+The returned Bru object is in the format:
 ```
 {
   first_name: string,
