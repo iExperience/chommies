@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var NUM_FEED_PROPS = process.env.NUM_FEED_PROPS || 20;
 var PORT = process.env.PORT || 3000;
-var POSITIVTY_THRESHOLD = -1;
+var POSITIVTY_THRESHOLD = .2;
 
 var app = express();
 
